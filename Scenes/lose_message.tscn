@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://mgaxbhn3vynj"]
+
+[ext_resource type="Script" path="res://Scenes/WinMessage.gd" id="1_ee45o"]
+[ext_resource type="Texture2D" uid="uid://n7rtksd0c40a" path="res://you win.png" id="2_ypced"]
+
+[node name="LoseMessage" type="Panel"]
+visible = false
+offset_left = 2935.0
+offset_top = 483.0
+offset_right = 3289.0
+offset_bottom = 775.0
+script = ExtResource("1_ee45o")
+
+[node name="Lose" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.5
+offset_right = 160.5
+offset_bottom = 88.0
+grow_horizontal = 2
+texture = ExtResource("2_ypced")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 105.0
+offset_right = 258.0
+offset_bottom = 233.0
+theme_override_font_sizes/font_size = 30
+text = "Back to
+ Main Menu"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

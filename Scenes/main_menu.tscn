@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://s711wliks6lh"]
+
+[ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_6yby3"]
+[ext_resource type="Texture2D" uid="uid://bmbnkdh64axu2" path="res://Green.png" id="1_nmg66"]
+[ext_resource type="Texture2D" uid="uid://5exkblf4qfqn" path="res://cooltext459586837745540.png" id="2_bsfr7"]
+[ext_resource type="Texture2D" uid="uid://bm6gy3ul8hf4u" path="res://cooltext459586753026616.png" id="3_kmtaj"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_6yby3")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nmg66")
+stretch_mode = 1
+
+[node name="Sub Logo" type="TextureRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -41.0
+offset_right = 378.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.401105, 0.401105)
+texture = ExtResource("2_bsfr7")
+
+[node name="Logo" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -112.0
+offset_right = 263.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_kmtaj")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 488.0
+offset_top = 324.0
+offset_right = 654.0
+offset_bottom = 443.0
+theme_override_font_sizes/font_size = 30
+text = "PLAY"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
